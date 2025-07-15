@@ -1,0 +1,87 @@
+/* 90s Grainy Gradient Styles */
+
+/* Custom styles for the grain effect */
+.grain-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    filter: url(#noise);
+    opacity: 0.5;
+}
+
+/* Modal for the CSS code */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #374151;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 90%;
+    max-width: 600px;
+    color: #D1D5DB;
+    position: relative;
+}
+
+.close-button {
+    color: #D1D5DB;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.code-block {
+    background-color: #1F2937;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 70vh;
+    overflow-y: auto;
+    border: 1px solid #4B5563;
+}
+
+/* Styles for expanding/collapsing settings panel content */
+#settings-content-wrapper {
+    transition: all 0.3s ease-in-out;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: visible;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#settings-content-wrapper.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#toggle-settings-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
